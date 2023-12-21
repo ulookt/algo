@@ -1,0 +1,421 @@
+body {
+    font-size: 100%;
+    font-family: 'Arial', sans-serif;
+    color: rgb(30, 29, 29);
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media print {
+    body {
+        color: #000;
+        background: #fff;
+    }
+    nav, header, footer, .navbar, .non-printable {
+        display: none; 
+    }
+    .printable {
+        width: 100%;
+        display: block; 
+    }
+
+}
+
+
+.external-links a {
+    text-decoration: underline; 
+}
+
+
+
+.small-text {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.8em; 
+}
+
+p {
+    font-size: 1em; 
+}
+
+
+
+header h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 2em; 
+    margin: 0; 
+    color: #1a0404; 
+}
+
+
+
+header, main, footer {
+    text-align: left;
+    background-color: rgba(192, 186, 186, 0.8); 
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    color: #121111;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFF59D;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.quote-container {
+    text-align: center;
+    background-color: #f0f0f0; 
+    padding: 0;
+}
+
+.quote-text {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+
+h2 {
+    font-size: 1rem; 
+}
+
+
+.center-text {
+    text-align: center;
+}
+
+
+
+
+
+footer {
+    background-color: #bcbcb8;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.content-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+.alumni-section {
+    margin-top: 40px;
+}
+
+.alumni-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.alumni-item {
+    text-align: center;
+}
+
+.alumni-item img {
+    width: 200px; 
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.thanking-text {
+    font-style: italic;
+    color: #555;
+}
+
+
+
+
+
+.mentor-container {
+    display: flex; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.thumbnail-container {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+}
+
+.thumbnail-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.text-container {
+    flex: 1; 
+}
+
+
+
+
+
+
+.text-center {
+    text-align: center;
+}
+
+
+.quote-text-bold {
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+
+
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .form-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+    .form-container {
+        max-width: 80%;
+        padding: 20px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 16px;
+    }
+    .form-container {
+        max-width: 50%;
+        padding: 70px;
+    }
+
+}
+
+
+
+
+
+
+input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.content-container p {
+    font-size: 18px; 
+}
+
+
+
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+figure {
+    text-align: center;
+}
+
+
+
+.video-container {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.advertisement {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+/* Style for the toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+}
+
+

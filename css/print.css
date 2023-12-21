@@ -1,0 +1,41 @@
+/* print.css */
+
+/* Hide non-essential elements */
+header, footer, .navigation {
+    display: none;
+}
+
+
+/* Adjust fonts and colors */
+body {
+    color: black;
+    font-size: 14px;
+}
+
+
+/* Remove backgrounds and images */
+body {
+    background: none;
+}
+
+img {
+    display: none;
+}
+
+
+/* Define page breaks */
+.section {
+    page-break-before: always;
+}
+
+/* Specify print-only content */
+.print-only {
+    display: block;
+}
+
+.screen-only {
+    display: none;
+}
+
+
+

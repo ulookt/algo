@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contacts-style.css">
+    <title>Algo - Mentors</title>
+
+
+    <style>
+        .quote-container {
+            background-color: #fef9f9; 
+            border-radius: 10px; 
+            padding: 20px; 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+    
+        .quote-text {
+            font-size: 1.5em; 
+            color: #424242; 
+            font-style: italic; 
+        }
+    </style>
+
+        <link id="stylesheet" rel="stylesheet" href="css/style.css">
+
+
+        <script>
+            //switch between stylesheets
+            function switchStylesheet(style) {
+            console.log(`Switching to ${style}`);
+            document.getElementById('stylesheet').href = `css/${style}.css`;
+        }
+
+        </script>
+
+
+
+
+</head>
+<body style="background-color: #FBE9E7; background-image: url('background.jpg'); background-size: cover; background-attachment: fixed;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo-container">
+            <img src="algo2.png" alt="Algo Logo" class="logo">
+        </div>
+
+        <div class="container-fluid justify-content-end">
+            <!--<a class="navbar-brand" href="#">Algo</a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <select id="styleSelector" onchange="switchStylesheet(this.value)">
+                    <option value="style">Light mode</option>
+                    <option value="alternative-style">Dark mode</option>
+                </select>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mentors.html">Mentors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="common.js"></script> 
+
+
+    <header>
+        <h1>Contacts</h1>
+    </header>
+
+
+
+    <main>
+
+        <div class="form-container">
+            <form action="submit_form.php" method="post"> 
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="language">Language:</label>
+                <select id="language" name="language" required>
+                    <option value="">Select a language...</option>
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                    <option value="french">other</option>
+                </select>
+
+                <fieldset>
+                    <legend>Country:</legend>
+                    <div>
+                        <label for="hungary">Hungary:</label>
+                        <input type="checkbox" id="hungary" name="country" value="hungary">
+                        
+                        <label for="usa">United States:</label>
+                        <input type="checkbox" id="usa" name="country" value="usa">
+                        
+                        <label for="new-zealand">New Zealand:</label>
+                        <input type="checkbox" id="new-zealand" name="country" value="newzealand">
+                        
+                        <label for="uk">United Kingdom:</label>
+                        <input type="checkbox" id="uk" name="country" value="uk">                    
+                    </div>
+                </fieldset>
+
+                <input type="submit" value="Submit">
+
+
+                
+            </form>
+        </div>
+
+
+
+    </main>
+
+
+
+    <script>
+        // Function to switch the stylesheet
+        function switchStylesheet(style) {
+            console.log(`Switching to ${style}`);
+            document.getElementById('stylesheet').href = `css/${style}.css`;
+            localStorage.setItem('theme', style); 
+        }
+    
+        // Function to load the theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.getElementById('stylesheet').href = `css/${savedTheme}.css`;
+                document.getElementById('styleSelector').value = savedTheme; 
+            }
+        });
+    </script>
+
+
+    <footer>
+        <p>© 2023 Algo Mentorship Program, LLC. All rights reserved.</p>
+        <p>Office Address: Budapest, Petőfi híd, 1117</p>
+
+    </footer>
+
+        
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+   
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Algo - Mentors</title>
+
+
+    <style>
+        .quote-container {
+            background-color: #fef9f9; 
+            border-radius: 10px; 
+            padding: 20px; 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+    
+        .quote-text {
+            font-size: 1.5em; 
+            color: #424242; 
+            font-style: italic; 
+        }
+    </style>
+
+        <link id="stylesheet" rel="stylesheet" href="css/style.css">
+
+
+        <script>
+            //switch between stylesheets
+            function switchStylesheet(style) {
+            console.log(`Switching to ${style}`);
+            document.getElementById('stylesheet').href = `css/${style}.css`;
+        }
+
+        </script>
+
+
+
+</head>
+<body style="background-color: #FBE9E7; background-image: url('background.jpg'); background-size: cover; background-attachment: fixed;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo-container">
+            <img src="algo2.png" alt="Algo Logo" class="logo">
+        </div>
+
+        <div class="container-fluid justify-content-end">
+            <!--<a class="navbar-brand" href="#">Algo</a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <select id="styleSelector" onchange="switchStylesheet(this.value)">
+                    <option value="style">Light mode</option>
+                    <option value="alternative-style">Dark mode</option>
+                </select>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mentors.html">Mentors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Scatter Plot
+            var scatterCtx = document.getElementById('scatterPlot').getContext('2d');
+            var scatterChart = new Chart(scatterCtx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Alumni Data',
+                        data: [
+                            { x: 45, y: 38 },
+                            { x: 320, y: 285 },
+                            { x: 150, y: 120 },
+                            { x: 90, y: 80 },
+                            { x: 45, y: 40 },
+                            { x: 200, y: 180 }
+                        ],
+                        backgroundColor: 'rgba(0, 100, 100, 0.8)',
+                        pointRadius: 10
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            position: 'bottom'
+                        },
+                        y: {
+                            min: 0
+                        }
+                    }
+                }
+            });
+
+            // Pie Chart
+            var pieCtx = document.getElementById('pieChart').getContext('2d');
+            var pieChart = new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Hungary', 'United States', 'Canada', 'New Zealand', 'Kyrgyzstan', 'Indonesia'],
+                    datasets: [{
+                        data: [38, 285, 120, 80, 40, 180],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.8)',
+                            'rgba(54, 162, 235, 0.8)',
+                            'rgba(255, 206, 86, 0.8)',
+                            'rgba(75, 192, 192, 0.8)',
+                            'rgba(153, 102, 255, 0.8)',
+                            'rgba(255, 159, 64, 0.8)'
+                        ],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        });
+    </script>
+
+    <header>
+        <h1>Statistics</h1>
+    </header>
+
+
+
+    <main>
+
+        <div class="table-container">
+            <table class="statistics-table">
+                <caption>Statistics Table</caption>
+                <thead>
+                    <tr>
+                        <th>Our Alumnies by country</th>
+                        <th>Quantity of students</th>
+                        <th>Quantity of students with job offer</th>
+                        <th>Office Address</th>
+                        <th>Phone Numbers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hungary</td>
+                        <td>45</td>
+                        <td>38</td>
+                        <td>Budapest, Tömö u. 62, 1083</td>
+                        <td>+36 707 58439</td>
+                    </tr>
+
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>United States</td>
+                        <td>320</td>
+                        <td>285</td>
+                        <td>Lake Matilde, Tennessee 74062.</td>
+                        <td>+1 432 4423 8432</td>
+                    </tr>
+                    <tr>
+                        <td>Canada</td>
+                        <td>150</td>
+                        <td>120</td>
+                        <td>Maple Avenue, Ontario M5H 2N2.</td>
+                        <td>+1 987 6543 2109</td>
+                    </tr>
+                    <tr>
+                        <td>United States</td>
+                        <td>320</td>
+                        <td>285</td>
+                        <td>Lake Matilde, Tennessee 74062.</td>
+                        <td>+1 432 4423 8432</td>
+                    </tr>
+                    <tr>
+                        <td>Canada</td>
+                        <td>150</td>
+                        <td>120</td>
+                        <td>Maple Avenue, Ontario M5H 2N2.</td>
+                        <td>+1 987 6543 2109</td>
+                    </tr>
+                    <tr>
+                        <td>New Zealand</td>
+                        <td>90</td>
+                        <td>80</td>
+                        <td>Kauri Crescent, Auckland 0626.</td>
+                        <td>+64 9 8765 4321</td>
+                    </tr>
+                    <tr>
+                        <td>Kyrgyzstan</td>
+                        <td>45</td>
+                        <td>40</td>
+                        <td>Bishkek Street, 720001.</td>
+                        <td>+996 312 345 678</td>
+                    </tr>
+                    <tr>
+                        <td>Indonesia</td>
+                        <td>200</td>
+                        <td>180</td>
+                        <td>Jakarta Avenue, 12190.</td>
+                        <td>+62 21 9876 5432</td>
+                    </tr>
+                </tbody>
+            
+            </table>
+        </div>
+
+
+
+        <div class="chart-container">
+            <figure>
+                <figcaption>Scatter Plot: Quantity of Students vs. Quantity of Students with Job Offer</figcaption>
+                <canvas id="scatterPlot" width="300" height="200"></canvas>
+            </figure>
+            
+            <figure>
+                <figcaption>Pie Chart: Distribution of Alumni by Country</figcaption>
+                <canvas id="pieChart" width="300" height="200"></canvas>
+            </figure>
+        </div>
+        
+        <br><br><br><br><br>
+        <div class="video-container">
+            <video width="600" height="400" controls poster="frameposter.jpg">
+                <source src="adv.mp4" type="video/mp4">
+                <track src="subtitles.srt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+        
+        
+    </main>
+
+
+    <script>
+        // Function to switch the stylesheet
+        function switchStylesheet(style) {
+            console.log(`Switching to ${style}`);
+            document.getElementById('stylesheet').href = `css/${style}.css`;
+            localStorage.setItem('theme', style); 
+        }
+    
+        // Function to load the theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.getElementById('stylesheet').href = `css/${savedTheme}.css`;
+                document.getElementById('styleSelector').value = savedTheme; 
+            }
+        });
+    </script>
+    
+    <footer>
+        <p>© 2023 Algo Mentorship Program, LLC. All rights reserved.</p>
+        <p>Office Address: Budapest, Petőfi híd, 1117</p>
+
+    </footer>
+
+
+</body>
+</html>
